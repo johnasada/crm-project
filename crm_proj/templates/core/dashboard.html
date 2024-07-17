@@ -24,7 +24,7 @@
         <th scope="col">City</th>
         <th scope="col">Country</th>
         <th scope="col">Date Joined</th>
-
+        <th scope="col">Paid</th>
         <th scope="col">View</th>
     </tr>
   </thead>
@@ -41,6 +41,7 @@
             <td>{{record.city}}</td>
             <td>{{record.country}}</td>
             <td>{{record.creation_date|date:"F d, Y"}}</td>
+            <td>{{record.payment_status}}</td>
             <td><a class="btn btn-success btn-sm" href="{% url 'core:record-detail' record.id %}">view <i class="fa fa-eye" aria-hidden="true"></i></a></td>
         </tr>
       {% endfor %}

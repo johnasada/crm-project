@@ -4,7 +4,8 @@ from .forms import RecordForm
 from django.contrib import messages
 
 
-# Create your views here.
+
+
 
 
 def home(request):
@@ -15,7 +16,7 @@ def home(request):
 
 def dashboard(request):
     records = Record.objects.filter(created_by=request.user)
-    context ={
+    context = {
         "records": records
     }
     return render(request, "core/dashboard.html", context)

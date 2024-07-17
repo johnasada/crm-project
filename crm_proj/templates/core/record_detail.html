@@ -50,6 +50,10 @@
                 <th>Date Joined</th>
                 <td>{{ record.creation_date|date:"F d, Y" }}</td>
             </tr>
+        <tr>
+                <th>Paid</th>
+                <td>{{ record.payment_status }}</td>
+            </tr>
         </tbody>
     </table>
 
